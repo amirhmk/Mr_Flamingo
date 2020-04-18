@@ -33,10 +33,12 @@ bool raycolor(
       new_ray.origin = interesction_point;
       new_ray.direction = reflection.normalized();
 
-      Eigen::Vector3d reflected_rgb(0,0,0);
+
+      Eigen::Vector3d reflected_rgb(0, 0, 0);
       raycolor(new_ray, min_t_epsilon, objects, lights, num_recursive_calls - 1, reflected_rgb);
       rgb += (obj->material->km.array() * reflected_rgb.array()).matrix();
 
+      // choose medium to be 1 and 1.3, i.e water and air
       Eigen::Vector3d refraction = refract(ray.direction.normalized(), n, 1.0, 1.3);
 
       Ray new_ray_refraction;
@@ -45,7 +47,7 @@ bool raycolor(
 
       Eigen::Vector3d refraction_rgb(0, 0, 0);
       raycolor(new_ray_refraction, min_t_epsilon, objects, lights, num_recursive_calls - 1, refraction_rgb);
-      rgb += (refraction_rgb.array()).matrix();
+      rgb += 0.3 * refraction_rgb;
     }
   }
   return hasHit;

@@ -1,0 +1,133 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 1,
+    "eye": [0,0,2],
+    "up": [0,1,0],
+    "look": [0,0,-1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+
+  "lights":[
+    {
+      "type": "point",
+      "color": [0.6,0.6,0.6],
+      "position": [-0.9,0.9,2]
+    },
+    {
+      "type": "point",
+      "color": [0.6,0.6,0.6],
+      "position": [-0.9,0.9,2]
+    }
+  ],
+
+  "materials": [
+    {
+      "name": "flamingo body",
+      "ka": [0.596078,0.305882,0.639216],
+      "kd": [0.596078,0.305882,0.639216],
+      "ks": [0.2,0.2,0.2],
+      "km": [0.6,0.1,0.0],
+      "phong_exponent": 200
+      
+    },
+    {
+      "name": "flamingo face",
+      "ka": [0.85,0.5,0.84],
+      "kd": [0.85,0.5,0.84],
+      "ks": [0.1,0.2,0.2],
+      "km": [0.3,0.1,0.0],
+      "phong_exponent": 200
+    },
+    {
+      "name": "glasses",
+      "ka": [0.89,0.89,0.0],
+      "kd": [0.89,0.89,0.0],
+      "ks": [0.89,0.89,0.0],
+      "km": [0.89,0.89,0.0],
+      "phong_exponent": 200
+    },
+    {
+      "name": "red metal",
+      "ka": [0.894118,0.901961,0.109804],
+      "kd": [0.894118,0.101961,0.109804],
+      "ks": [0.2,0.2,0.2],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 500
+    },
+    {
+      "name": "sky",
+      "ka": [0.67,0.84,0.90],
+      "kd": [0.67,0.84,0.90],
+      "ks": [0.05,0.05,0.1],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 500
+    },
+    {
+      "name": "water",
+      "ka": [0.529, 0.80, 0.92],
+      "kd": [0.529, 0.80, 0.92],
+      "ks": [0.1, 0.20, 0.3],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 2000
+    },
+    {
+      "name": "hat",
+      "ka": [1,0.49804,0],
+      "kd": [1,0.49804,0],
+      "ks": [0.2,0.2,0.2],
+      "km": [0.1,0.1,0.1],
+      "phong_exponent": 500
+    },
+    {
+      "name": "beak",
+      "ka": [0.05, 0.05, 0.05],
+      "kd": [0.05, 0.05, 0.05],
+      "ks": [0.05, 0.05, 0.05],
+      "km": [0.05, 0.05, 0.05],
+      "phong_exponent": 500
+    }
+  ],
+
+  "objects": [
+    {
+      "material": "water",
+      "type": "plane",
+      "point": [0,-1,0.5],
+      "normal": [0,1,0.45]
+    },
+    {
+      "type": "soup",
+      "material": "flamingo body",
+      "stl": "flamingo_body_high.stl"
+    },
+    {
+      "type": "soup",
+      "material": "beak",
+      "stl": "flamingo_beak.stl"
+    },
+    {
+      "type": "soup",
+      "material": "flamingo face",
+      "stl": "flamingo_face.stl"
+    },
+    {
+      "type": "soup",
+      "material": "hat",
+      "stl": "flamingo_hat.stl"
+    },
+    {
+      "type": "soup",
+      "material": "glasses",
+      "stl": "flamingo_glasses.stl"
+    },
+    {
+      "type": "plane",
+      "material": "sky",
+      "point": [0,2,0],
+      "normal": [0,-1,0]
+    }
+  ]
+}
+
