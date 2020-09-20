@@ -33,6 +33,7 @@
 
 # Build file
 build/
+**/build_release/
 
 README.html
 *.un~
