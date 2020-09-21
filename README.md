@@ -21,3 +21,7 @@ Run `make` if you are on `Mac` or `Linux`
 ```BASH
 ./raytracing
 ```
+
+## Results
+
+![flamingo](./flamingo.png)
